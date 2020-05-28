@@ -1,0 +1,71 @@
+    class Patient
+    {
+        public Patient()
+        {
+ 
+        }
+        public Patient(string фио, string Адрес, string НомерМедицинскойКарты, string Диагноз)
+        {
+            string[] splt = фио.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+ 
+            фамилия = splt[0];
+ 
+            Имя = splt[1];
+ 
+            Отчество = splt[2];
+ 
+            this.Адрес = Адрес;
+ 
+            this.НомерМедицинскойКарты = НомерМедицинскойКарты;
+ 
+            this.Диагноз = Диагноз;
+        }
+        private string фамилия;
+ 
+        public string Фамилия
+        {
+            get { return фамилия; }
+            set { фамилия = value; }
+        }
+ 
+        private string имя;
+ 
+        public string Имя
+        {
+            get { return имя; }
+            set { имя = value; }
+        }
+ 
+        private string отчество;
+ 
+        public string Отчество
+        {
+            get { return отчество; }
+            set { отчество = value; }
+        }
+        private string адрес;
+ 
+        public string Адрес
+        {
+            get { return адрес; }
+            set { адрес = value; }
+        }
+        private string номерМедицинскойКарты;
+ 
+        public string НомерМедицинскойКарты
+        {
+            get { return номерМедицинскойКарты; }
+            set { номерМедицинскойКарты = value; }
+        }
+        private string диагноз;
+ 
+        public string Диагноз
+        {
+            get { return диагноз; }
+            set { диагноз = value; }
+        }
+ 
+        public override string ToString()
+        {
+           return  (Фамилия + " " + Имя + " " + " " +Отчество + " "+ Адрес + " " + НомерМедицинскойКарты + " " + Диагноз);
+        }
